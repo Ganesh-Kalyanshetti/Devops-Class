@@ -1,50 +1,31 @@
-pipeline
-{
-  agent any
-  tools
-  {
-    jdk 'jdk21'
-  }
-  stages
-  {
-    stage('checkout')
-    {
-      steps
-      {
-        git branch:'main',url:'https://github.com/Ganesh-Kalyanshetti/Devops-Class.git'  
-      }
+pipeline {
+    agent any
 
-    }
-    stage('Complie')
-    {
-      steps
-      {
-        echo "Compiling Java code"
-        sh 'javac one.java'
-      }
+    tools {
+        python 'python3' 
     }
 
-    stage('run')
-    {
-      steps
-      {
-        echo "Running Java code"
-        sh 'java one'
-      }
-    }
-    
-  }
-  post 
-    {
-      success
-      {
-        echo 'Build and executed successfull'
-      }
-      failure
-      {
-        echo 'Failed to run java file'
-      }
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Ganesh-Kalyanshetti/Devops-Class.git'
+            }
+        }
+
+        stage('Run Python Script') {
+            steps {
+                echo "Running Python code"
+                sh 'python3 one.py' // change 'one.py' to your actual Python filename
+            }
+        }
     }
 
+    post {
+        success {
+            echo 'Build and execution successful!'
+        }
+        failure {
+            echo 'Failed to run Python script!'
+        }
+    }
 }
-
