@@ -1,0 +1,31 @@
+pipeline
+{
+  agent any
+  stages
+  {
+    stage('checkout')
+    {
+      steps
+      {
+        git branch:'main',url:'https://github.com/Ganesh-Kalyanshetti/Devops-Class.git'  
+      }
+
+    }
+    stage('building')
+    {
+      steps
+      {
+        echo "Building with help of pipeline......."
+      }
+    }
+    stage('Test')
+    {
+      steps
+      {
+        echo "Testing with the help of pipeline..........."
+      }
+    }
+    
+  }
+
+}
