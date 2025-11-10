@@ -1,6 +1,10 @@
 pipeline
 {
   agent any
+  tools
+  {
+    jdk 'jdk21'
+  }
   stages
   {
     stage('checkout')
@@ -11,21 +15,33 @@ pipeline
       }
 
     }
-    stage('building')
+    stage('Complie')
     {
       steps
       {
-        echo "Building with help of pipeline......."
+        echo "Compiling Java code"
+        sh 'javac one.java'
       }
     }
-    stage('Test')
+    stage('run')
     {
       steps
       {
-        echo "Testing with the help of pipeline..........."
+        echo "Running Java code"
+        sh 'java one'
       }
     }
-    
+    post 
+    {
+      success
+      {
+        echo 'Build and executed successfull'
+      }
+      failure
+      {
+        echo 'Failed to run java file'
+      }
+    }
   }
 
 }
