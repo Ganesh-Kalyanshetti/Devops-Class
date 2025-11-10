@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-    python 'Python 3.11'
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -15,7 +11,7 @@ pipeline {
         stage('Run Python Script') {
             steps {
                 echo "Running Python code"
-                sh 'python3 one.py' // change 'one.py' to your actual Python filename
+                sh 'python3 one.py' 
             }
         }
     }
