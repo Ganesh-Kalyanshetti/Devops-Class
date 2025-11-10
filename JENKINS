@@ -23,6 +23,7 @@ pipeline
         sh 'javac one.java'
       }
     }
+
     stage('run')
     {
       steps
@@ -31,7 +32,9 @@ pipeline
         sh 'java one'
       }
     }
-    post 
+    
+  }
+  post 
     {
       success
       {
@@ -42,6 +45,6 @@ pipeline
         echo 'Failed to run java file'
       }
     }
-  }
 
 }
+
