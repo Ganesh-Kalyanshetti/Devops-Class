@@ -14,7 +14,7 @@ pipeline
             steps
             {
 
-                git brach: main,url("https://github.com/Ganesh-Kalyanshetti/Devops-Class.git")
+                git brach: main,url: "https://github.com/Ganesh-Kalyanshetti/Devops-Class.git"
             }
 
         }
