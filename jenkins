@@ -22,9 +22,7 @@ pipeline
         {
             steps
             {
-                echo "Hello "
-                echo env.name == main ? "hello main" : "hello one wbranch"
-                
+                echo "Hello "        
             }
         }
 
