@@ -1,0 +1,31 @@
+pipeline
+{
+    agent any
+
+    environment 
+    {
+        name="main" 
+    }
+
+    stages
+    {
+        stage('link')
+        {
+            steps
+            {
+
+                git brach: main,url("https://github.com/Ganesh-Kalyanshetti/Devops-Class.git")
+            }
+
+        }
+        stage('echo')
+        {
+            steps
+            {
+                echo "Hello main" ? env.name="main" : echo "hello new onebranch"
+            }
+        }
+
+    }
+    
+}
