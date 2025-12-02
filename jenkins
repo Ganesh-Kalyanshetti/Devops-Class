@@ -22,7 +22,8 @@ pipeline
         {
             steps
             {
-                echo "Hello "        
+                echo "Hello "
+                echo env.name == "main" ? "Hello main" : "hello new bracnh"
             }
         }
 
