@@ -1,0 +1,47 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                
+                    echo "Building..."
+                    
+                
+            }
+        }
+    }
+
+    post {
+    success {
+        script {
+            try {
+                emailext(
+                    // to: 'ganeshkalyanshetti7@gmail.com',
+                    // from: 'MSRIT <ganeshkalyanshetti7@gmail.com>',
+                    subject: "SUCCESSFUL: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: "Build Successful: ${env.BUILD_URL}"
+                )
+            } catch (err) {
+                // This runs when success email fails
+                emailext(
+                    to: 'ganeshkalyanshetti7@gmail.com',
+                    from: 'MSRIT <ganeshkalyanshetti7@gmail.com>',
+                    subject: "ERROR SENDING SUCCESS MAIL: ${env.JOB_NAME}",
+                    body: "Success email failed.\nError: ${err}\n${env.BUILD_URL}"
+                )
+            }
+        }
+    }
+
+    failure {
+        emailext(
+            to: 'ganeshkalyanshetti7@gmail.com',
+            from: 'MSRIT <ganeshkalyanshetti7@gmail.com>',
+            subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+            body: "Build Failed: ${env.BUILD_URL}"
+        )
+    }
+}
+
+}
