@@ -3,14 +3,14 @@ pipeline {
     post {
         failure {
             emailext (
-                to: 'devops-team@example.com',
+                to: 'ganeshkalyanshetti2003@example.com',
                 subject: "FAILED: Build ${env.JOB_NAME}",
                 body: "Build failed: ${env.BUILD_URL}"
             )
         }
         success {
             emailext (
-                to: 'stakeholders@example.com',
+                to: 'ganeshkalyanshetti2003@example.com',
                 subject: "SUCCESSFUL: Build ${env.JOB_NAME}",
                 body: "Build Successful: ${env.BUILD_URL}"
             )
