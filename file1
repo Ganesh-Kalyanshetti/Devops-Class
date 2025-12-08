@@ -15,7 +15,7 @@ pipeline {
     post {
         failure {
             emailext (
-                to: 'ganeshkalyanshetti7@gmail.com',
+                to: 'someonelse@gmail.com',
                 from: 'jenkins server <someone@gmail.com>',
                 subject: "FAILED: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build failed: ${env.BUILD_URL}"
