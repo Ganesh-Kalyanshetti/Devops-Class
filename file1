@@ -4,12 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    // Your build commands here
+                
                     echo "Building..."
-                    // Simulating a failure, you can remove this if your build is working fine
-                    // sh 'exit 1' // Uncomment to simulate failure
-                }
+                    
+                
             }
         }
     }
