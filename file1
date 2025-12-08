@@ -17,8 +17,8 @@ pipeline {
         script {
             try {
                 emailext(
-                    to: 'ganeshkalyanshetti7@gmail.com',
-                    from: 'MSRIT <ganeshkalyanshetti7@gmail.com>',
+                    // to: 'ganeshkalyanshetti7@gmail.com',
+                    // from: 'MSRIT <ganeshkalyanshetti7@gmail.com>',
                     subject: "SUCCESSFUL: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                     body: "Build Successful: ${env.BUILD_URL}"
                 )
