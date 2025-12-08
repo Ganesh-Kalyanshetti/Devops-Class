@@ -23,9 +23,7 @@ pipeline {
                 to: 'ganeshkalyanshetti2003@gmail.com',
                 from: 'Jenkins-time pass <ganeshkalyanshetti7@gmail.com>',
                 subject: "SUCCESSFUL: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: "Build Successful: ${env.BUILD_URL} so this is how its done not ur jenkins job run successfully
-                        ////////////////////////////////
-                            vuyyyyyyyyyyyyyyyy "
+                body: "Build Successful: ${env.BUILD_URL} so this is how its done not ur jenkins job run successfully //////////////////////////////// vuyyyyyyyyyyyyyyyy "
             )
         }
     }
