@@ -23,8 +23,8 @@ pipeline {
         }
         success {
             emailext (
-                to: 'ganeshkalyanshetti2003@gmail.com',
-                from: 'jenkins server<someonelse@gmail.com>',
+                to: 'ganeshkalyanshetti2003@g  mail.com',
+                from: 'jenkins server<someonel  se@gmail.com>',
                 subject: "SUCCESSFUL: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build Successful: ${env.BUILD_URL}"
             )
