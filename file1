@@ -1,17 +1,31 @@
 pipeline {
-    // ... other stages
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Your build commands here
+                    echo "Building..."
+                    // Simulating a failure, you can remove this if your build is working fine
+                    // sh 'exit 1' // Uncomment to simulate failure
+                }
+            }
+        }
+    }
+
     post {
         failure {
             emailext (
                 to: 'ganeshkalyanshetti2003@example.com',
-                subject: "FAILED: Build ${env.JOB_NAME}",
+                subject: "FAILED: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build failed: ${env.BUILD_URL}"
             )
         }
         success {
             emailext (
                 to: 'ganeshkalyanshetti2003@example.com',
-                subject: "SUCCESSFUL: Build ${env.JOB_NAME}",
+                subject: "SUCCESSFUL: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build Successful: ${env.BUILD_URL}"
             )
         }
