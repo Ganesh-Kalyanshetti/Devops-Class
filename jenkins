@@ -6,7 +6,10 @@ pipeline
     {
         name="main" 
     }
-
+     triggers {
+        // This makes Jenkins listen to GitHub webhooks
+        githubPush()
+    }
     stages
     {
         stage('link')
