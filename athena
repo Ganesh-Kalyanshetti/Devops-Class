@@ -1,0 +1,16 @@
+CREATE EXTERNAL TABLE students (
+  StudentID INT,
+  Name STRING,
+  Dept STRING,
+  Marks INT,
+  Result STRING
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+  'separatorChar' = ',',
+  'quoteChar' = '"',
+  'escapeChar' = '\\'
+)
+STORED AS TEXTFILE
+LOCATION 's3://amzm-ia2/'
+TBLPROPERTIES ('skip.header.line.count'='1');
