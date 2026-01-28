@@ -1,0 +1,5 @@
+valkey-cli \
+  -h clustercfg.lab-redis.r3vsci.apne1.cache.amazonaws.com \
+  -p 6379 \
+  --tls \
+  -c
