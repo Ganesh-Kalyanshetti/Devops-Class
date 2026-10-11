@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "user": "Alex",
+        "comment": "Great video! Learned a lot from this.",
+        "likes": 12,
+        "time": "2 days ago"
+    },
+    {
+        "id": 2,
+        "user": "John",
+        "comment": "Very clear explanation. Thanks for sharing!",
+        "likes": 8,
+        "time": "1 week ago"
+    },
+    {
+        "id": 3,
+        "user": "Sarah",
+        "comment": "Can you make a part 2 of this?",
+        "likes": 20,
+        "time": "3 hours ago"
+    },
+    {
+        "id": 4,
+        "user": "Mike",
+        "comment": "The editing is really clean and easy to follow.",
+        "likes": 5,
+        "time": "5 days ago"
+    },
+    {
+        "id": 5,
+        "user": "Emma",
+        "comment": "This solved my issue in just a few minutes.",
+        "likes": 16,
+        "time": "1 day ago"
+    },
+    {
+        "id": 6,
+        "user": "Daniel",
+        "comment": "I've been searching for this tutorial everywhere.",
+        "likes": 7,
+        "time": "6 days ago"
+    },
+    {
+        "id": 7,
+        "user": "Sophia",
+        "comment": "Amazing content as always!",
+        "likes": 24,
+        "time": "4 hours ago"
+    },
+    {
+        "id": 8,
+        "user": "David",
+        "comment": "Nice explanation. Please upload more React videos.",
+        "likes": 11,
+        "time": "3 days ago"
+    },
+    {
+        "id": 9,
+        "user": "Olivia",
+        "comment": "This deserves way more views.",
+        "likes": 33,
+        "time": "2 weeks ago"
+    },
+    {
+        "id": 10,
+        "user": "James",
+        "comment": "Simple and easy to understand.",
+        "likes": 9,
+        "time": "12 hours ago"
+    },
+    {
+        "id": 11,
+        "user": "Ava",
+        "comment": "Your teaching style is awesome.",
+        "likes": 14,
+        "time": "7 hours ago"
+    },
+    {
+        "id": 12,
+        "user": "Ethan",
+        "comment": "Thank you for making this tutorial.",
+        "likes": 6,
+        "time": "2 days ago"
+    },
+    {
+        "id": 13,
+        "user": "Mia",
+        "comment": "I finally understood this topic.",
+        "likes": 17,
+        "time": "5 hours ago"
+    },
+    {
+        "id": 14,
+        "user": "Noah",
+        "comment": "Can you explain hooks in more detail?",
+        "likes": 10,
+        "time": "8 days ago"
+    },
+    {
+        "id": 15,
+        "user": "Charlotte",
+        "comment": "Loved the examples you used.",
+        "likes": 13,
+        "time": "1 week ago"
+    }
+]

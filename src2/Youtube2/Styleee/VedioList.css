@@ -1,0 +1,37 @@
+.video-card
+{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.each-Video
+{
+    
+    width: 100%;
+    height: 225px;
+    border-radius: 8px;
+    /* object-fit: cover; */
+}
+
+.video-details 
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.video-details h4
+{
+    margin: 0;
+    
+    font-size: 15px;
+}
+
+.video-details h6
+{
+    margin: 2px 0 5px 0;
+    color: gray;
+    font-size: 13px;
+
+}

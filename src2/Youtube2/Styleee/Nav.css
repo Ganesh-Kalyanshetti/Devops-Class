@@ -1,0 +1,75 @@
+.navsection
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    color: aliceblue;
+    background-color: rgb(49, 47, 47);
+}
+
+.search 
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search button
+{
+    border-radius: 10px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+}
+#searchbtn
+{
+    width: 400px;
+    height: 25px;
+    color: white;
+    background-color: rgb(49, 47, 47);
+    border-radius: 5px;
+}
+#searchbtn:focus
+{
+    outline: none;
+    border: 1px solid #3ea6ff; /* YouTube-like blue border */
+}
+
+.right
+{
+    display: flex;
+    gap: 20px;
+
+}
+.right button
+{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+
+}
+.right span
+{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+
+.logo 
+{
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   cursor: pointer;
+   
+}
+.logo img
+{
+    width: 35px;
+    height: 25px;
+     mix-blend-mode: screen;
+    border-radius: 6px;
+}
