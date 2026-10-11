@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 100%;
+        height: 10vh;
+        background-color: black;
+    }
+
+    #options {
+        display: flex;
+        color: white;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #dropdown {
+        display: none;
+        position: absolute;
+        background-color: white;
+        color: black;
+        width: 100px;
+        height: 70px;
+        padding: 10px;
+    }
+
+    #items {
+        position: relative;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <nav>
+        <div id="container">
+            <div id="options">
+                <img src="Puma.png" alt="Logo">
+
+                <div id="items">New
+                    <div id="dropdown">
+                        <div>Puma Club</div>
+                        <div>Ballets</div>
+                    </div>
+                </div>
+
+                <div id="items">Men
+                    <div id="dropdown">
+                        <div>Shirt</div>
+                        <div>pant</div>
+                    </div>
+                </div>
+
+
+                <div id="items">Women
+                    <div id="dropdown">
+                        <div>Top</div>
+                        <div>Skirt</div>
+                    </div>
+                </div>
+
+
+                <div id="items">Kids
+                    <div id="dropdown">
+                        <div>Toy</div>
+                        <div>Shoes</div>
+                    </div>
+                </div>
+
+
+                <div id="items">Others
+                    <div id="dropdown" style="margin-left: -50px;">
+                        <div >For more info go to store</div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        let items = document.querySelectorAll("#items");
+        let dropdowns = document.querySelectorAll("#dropdown");
+
+        items.forEach((item, i) => {
+            item.addEventListener('mouseover', () => {
+                dropdowns[i].style.display = "block";
+            });
+
+            item.addEventListener('mouseout', () => {
+                dropdowns[i].style.display = "none";
+            });
+        });
+
+    </script>
+</body>

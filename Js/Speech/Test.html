@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" name="" id="txt">
+    <br>
+    <button id="speak">Talk</button>
+
+
+</body>
+<script>
+    
+    let txt = document.getElementById("txt");
+    let speak = document.getElementById("speak");
+
+    speak.addEventListener("click", () => {
+
+        maxss()
+    })
+
+    function maxss() {
+
+        let count = 0;
+        const hh = setInterval(() => {
+
+            count++;
+            speechh = new SpeechSynthesisUtterance(txt.value);
+            speechSynthesis.speak(speechh);
+
+            if (count === 5) {
+                clearInterval(hh)
+            }
+        }, 1000);
+
+    }
+
+</script>
+
+</html>
